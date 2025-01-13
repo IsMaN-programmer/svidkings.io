@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="Дед мороз" />
+        <meta name="description" content="Отправьте открытку деду морозу и получите подарок" />
+        <meta name="keywords" content="дед мороз, открытка, подарок" />
+        <meta name="robots" content="index; follow; noarchieve" />
+        <meta name="viewport" content="user-scalable=yes; width=device-width; initial-scale=1; maximum-scale=5;" />
+        <title>Сайт пока думаем</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" href="img/happy-new-year.ico" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+            <ul class="menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#tournaments">Турниры</a></li>
+                <li><a href="https://t.me/svidkings">Помощь</a></li>
+                <li><a href="https://t.me/svidkings">Новости</a></li>
+            </ul>
+            </nav>
+            <video class="header-video 2" autoplay loop muted>
+                <source src="video/4291570-hd_1920_1080_30fps.mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+            <div class="header-content">
+                <h2>Добро пожаловать на нашу платформу</h2>
+                <p>Участвуйте в турнирах и выйгрывайте призы.</p>
+            </div>
+        </header>
+        <section id="tournaments">
+        <div class="tournament-block">
+            <h2>PUBG mobile</h2>
+             <table>
+            <tr>
+                <th>Стоимость участия</th>
+                <td>10 000 сум за человека</td>
+            </tr>
+            <tr>
+                <th>Дата турнира</th>
+                <td>12.01.2024</td>
+            </tr>
+            <tr>
+                <th>Призовой фонд</th>
+                <td>500 000 сум</td>
+            </tr>
+            <tr>
+                <th>Тип турнира</th>
+                <td>Склад (4 человека)</td>
+            </tr>
+        </table>
+            <button class="join-button" onclick="openModal()">Участвовать</button>
+        </div>
+        <div class="tournament-block">
+            <h2>PUBG mobile (tez orada)</h2>
+            <table>
+            <tr>
+                <th>Стоимость участия</th>
+                <td>10 000 сум за человека</td>
+            </tr>
+            <tr>
+                <th>Дата турнира</th>
+                <td>12.01.2024</td>
+            </tr>
+            <tr>
+                <th>Призовой фонд</th>
+                <td>1 000 000 сум</td>
+            </tr>
+            <tr>
+                <th>Тип турнира</th>
+                <td>Склад (4 человека)</td>
+            </tr>
+        </table>
+            <button class="join-button" disabled>Участвовать</button>
+        </div>
+        <div class="tournament-block">
+            <h2>PUBG mobile (tez orada)</h2>
+            <table>
+            <tr>
+                <th>Стоимость участия</th>
+                <td>10 000 сум за человека</td>
+            </tr>
+            <tr>
+                <th>Дата турнира</th>
+                <td>12.01.2024</td>
+            </tr>
+            <tr>
+                <th>Призовой фонд</th>
+                <td>2 000 000 сум</td>
+            </tr>
+            <tr>
+                <th>Тип турнира</th>
+                <td>Склад (4 человека)</td>
+            </tr>
+        </table>
+            <button class="join-button" disabled>Участвовать</button>
+        </div>
+        <div class="tournament-block">
+            <h2>PUBG mobile (tez orada)</h2>
+            <table>
+            <tr>
+                <th>Стоимость участия</th>
+                <td>10 000 сум за человека</td>
+            </tr>
+            <tr>
+                <th>Дата турнира</th>
+                <td>12.01.2024</td>
+            </tr>
+            <tr>
+                <th>Призовой фонд</th>
+                <td>4 000 000 сум</td>
+            </tr>
+            <tr>
+                <th>Тип турнира</th>
+                <td>Склад (4 человека)</td>
+            </tr>
+        </table>
+            <button class="join-button" disabled>Участвовать</button>
+        </div>
+    </section>
+      <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Участвуйте в турнире</h2>
+                <form id="teamForm">
+                    <label for="teamName">Имя команды:</label>
+                    <input type="text" id="teamName" name="teamName" required><br><br>
+                    <label for="payment">Номер для перевода:</label>
+                    <input type="text" id="payment" value="9860 0825 0938 3665 (Ismanov Sardor)" disabled><br><br>
+                    <a href="https://t.me/svidkings" target="_blank" class="submit-button">Перейти в Telegram</a>
+                </form>
+            </div>
+        </div>
+    <footer>
+        <p>&copy; 2025 IsMaN. Все права защищены.</p>
+    </footer>
+    </body>
+</html>
