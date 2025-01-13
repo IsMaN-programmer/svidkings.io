@@ -1,0 +1,310 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    flex-wrap: wrap; /* Чтобы элементы на мобильных устройствах не выходили за пределы */
+    margin: 0;
+}
+
+.menu li {
+    margin: 10px 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+.sub-menu {
+    display: none;
+    padding-left: 20px;
+}
+.sub-menu li {
+    margin: 10px 0;
+}
+.sub-menu.show {
+    display: block;
+}
+section {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tournament-block {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tournament-block h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.join-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    width: 100%; /* Кнопка растягивается на всю ширину */
+}
+
+.join-button:hover {
+    background-color: #218838;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.join-button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    display: flex;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+#successMessage {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+td {
+    background-color: #fff;
+}
+
+/* Медиазапросы для мобильных устройств (с максимальной шириной экрана 768px) */
+@media (max-width: 768px) {
+    .header-content {
+        top: 30%; /* Немного смещаем текст вниз, чтобы он не уходил в верхнюю часть экрана */
+    }
+
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .header-content p {
+        font-size: 1.2rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 8px 0;
+    }
+
+    .tournament-block {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .join-button {
+        width: 100%; /* Кнопка будет растягиваться на всю ширину */
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    table {
+        font-size: 0.9rem; /* Уменьшаем шрифт таблицы на мобильных устройствах */
+    }
+
+    .tournament-block h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Медиазапросы для экранов с шириной более 768px (для десктопных устройств) */
+@media (min-width: 769px) {
+    .header-content h1 {
+        font-size: 3rem;
+    }
+
+    .header-content p {
+        font-size: 1.5rem;
+    }
+
+    .menu {
+        flex-direction: row; /* Горизонтальное меню для десктопов */
+    }
+
+    .tournament-block {
+        width: 70%; /* Блоки занимают меньше места */
+    }
+
+    .join-button {
+        width: auto; /* Кнопка будет по ширине контента */
+    }
+}
+.language-selector {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    gap: 1px;
+}
+
+.language-selector button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.language-selector button:hover {
+    background-color: #555;
+}
+#imageSlider {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Высота слайдера */
+    overflow: hidden;
+}
+
+.slider-image {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: left 1s ease-in-out;
+}
+
+#imageSlider .slider-image.active {
+    left: 0;
+}
